@@ -9,16 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View{
-        HeaderView()
-        Text("Este es el contenido, o sea la mitad")
-        FooterView()
+        VStack{
+            HeaderView()
+            Text("Este es el contenido, o sea la mitad")
+            FooterView()
+        }
+        .padding()
     }
 }
 
 
 struct HeaderView : View {
     var body: some View {
-        Text("Este es el grande")
+        Text("Este es el encabezado principal")
             .font(.largeTitle)
             .bold()
             .foregroundColor(.blue)
@@ -29,7 +32,7 @@ struct HeaderView : View {
 struct FooterView : View {
     var body: some View {
         Text("Este es el pie de pagina")
-            .font(.caption)
+            .font(.footnote)
             .foregroundColor(.gray)
             .padding()
             .italic()
